@@ -1,6 +1,8 @@
 @use "mixins/border-box" as *;
 
 .title {
+  padding: 0;
+  margin: 0;
   @include border-box;
   font-size: 55px;
   font-weight: 700;

@@ -32,7 +32,7 @@
     height: 28px;
 
     &_theme_dark {
-      background-image: url("../../../src/images/sun_theme_dark.svg");
+      background-image: url("../../src/images/sun_theme_dark.svg");
     }
   }
 
@@ -90,10 +90,11 @@
     @include border-box;
     padding: 0;
     margin: 0;
-    margin-top: 86px;
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo-color {
@@ -302,14 +303,14 @@
     }
 
     &__panel {
-      margin-top: 99px;
+      margin-top: 96px;
       align-items: center;
     }
 
     &__logo-color {
       display: block;
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
     }
 
     &__form-text {

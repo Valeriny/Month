@@ -2,9 +2,9 @@ const body = document.querySelector(".body");
 const nav = document.querySelector(".nav");
 const menuLink = document.querySelectorAll(".menu__link");
 const navIcon = document.querySelector(".nav__icon");
-const headerSubtitle = document.querySelector(".header__subtitle");
-const headerBikeFix = document.querySelector(".header__bike-fix");
-const activityEddyMerckx = document.querySelector(".Eddy-Merckx__activity");
+const headerSubtitle = document.querySelector(".intro__subtitle");
+const headerBikeFix = document.querySelector(".intro__bike-fix");
+const activityEddyMerckx = document.querySelector(".eddy-merckx__activity");
 const sliderSubtitleView = document.querySelector(".slider__subtitle-view");
 const trainingSubtitle = document.querySelector(".training__subtitle");
 const trainingLink = document.querySelectorAll(".training__link");
@@ -92,28 +92,73 @@ function draw() {
   offset = 1;
 }
 
-function left() {
+function drawRight() {
+  let img = document.createElement("img");
+  img.src = slider[step];
+  img.classList.add("slider__img");
+  img.style.left = 0 + "px";
+  document.querySelector("#slider").appendChild(img);
+
+  if (step + 1 == slider.length) {
+    step = 0;
+  } else {
+    step++;
+  }
+  offset = 0;
+}
+
+function right() {
   let sliders2 = document.querySelectorAll(".slider__img");
   let offset2 = 0;
+
   for (let i = 0; i < sliders2.length; i++) {
-    sliders2[i].style.left = offset2 * 820 - 820 + "px";
+    sliders2[i].style.left = offset2 + 690 + "px";
     offset2++;
 
-    if (sliders2[i].src === "http://127.0.0.1:5506/src/images/highway.jpg") {
+    if (sliders2[0].src === "http://127.0.0.1:5506/src/images/highway.jpg") {
       sliderVector.src = "images/Vector 1.svg";
-    } else if (sliders2[i].src === "http://127.0.0.1:5506/src/images/gravel.jpg") {
+    } else if (
+      sliders2[0].src === "http://127.0.0.1:5506/src/images/gravel.jpg"
+    ) {
       sliderVector.src = "images/Vector 2.svg";
     } else {
       sliderVector.src = "images/Vector 3.svg";
     }
   }
-  sliders2[0].remove();
+  console.log(sliders2[i]);
+  sliders2[1].remove();
+  drawRight();
+}
+
+function left() {
+  let sliders2 = document.querySelectorAll(".slider__img");
+  let offset2 = 0;
+
+  for (let i = 0; i < sliders2.length; i++) {
+    sliders2[i].style.left = offset2 * 820 - 820 + "px";
+    offset2++;
+    if (sliders2[i].src === "http://127.0.0.1:5506/src/images/highway.jpg") {
+      sliderVector.src = "images/Vector 1.svg";
+    } else if (
+      sliders2[i].src === "http://127.0.0.1:5506/src/images/gravel.jpg"
+    ) {
+      sliderVector.src = "images/Vector 2.svg";
+    } else {
+      sliderVector.src = "images/Vector 3.svg";
+    }
+  }
+  console.log(sliders2[i]);
   draw();
+  sliders2[0].remove();
 }
 
 buttonRight.addEventListener("click", function () {
   left();
   chaningText();
+});
+
+buttonLeft.addEventListener("click", function () {
+  right();
 });
 
 draw();
@@ -280,8 +325,8 @@ dropDownCardsList.addEventListener("click", function () {
 function switchTheme() {
   body.classList.toggle("body_theme_dark");
   nav.classList.toggle("nav_theme_dark");
-  headerSubtitle.classList.toggle("header__subtitle_theme_dark");
-  activityEddyMerckx.classList.toggle("Eddy-Merckx__activity_theme_dark");
+  headerSubtitle.classList.toggle("intro__subtitle_theme_dark");
+  activityEddyMerckx.classList.toggle("eddy-merckx__activity_theme_dark");
   sliderSubtitleView.classList.toggle("slider__subtitle-view_theme_dark");
   trainingSubtitle.classList.toggle("training__subtitle_theme_dark");
   footer.classList.toggle("footer_theme_dark");

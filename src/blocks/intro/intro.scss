@@ -1,7 +1,7 @@
 @use "mixins/border-box" as *;
 @use "variables" as *;
 
-.header {
+.intro {
   @include border-box;
   padding: 0;
   margin: 0;
@@ -57,8 +57,7 @@
     padding: 0;
     margin: 0;
     position: relative;
-    padding-left: 25%;
-    width: 100%;
+    max-width: 610px;
     max-height: 836px;
     align-items: end;
   }
@@ -68,6 +67,8 @@
     padding: 0;
     margin: 0;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -149,7 +150,7 @@
     margin: 0;
     position: absolute;
     top: 327px;
-    left: 0px;
+    right: 370px;
     width: 440px;
     height: 300px;
     background-color: $backgroundcolorWhite;
@@ -176,9 +177,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  .header {
+  .intro {
     margin-top: 0;
-    padding: 40px 0;
+    padding: 114px 0 40px;
     grid-template-columns: none;
     grid-template-rows: 0.5fr 1.9fr 0.6fr;
     column-gap: 0;
@@ -203,8 +204,8 @@
 
     &__img {
       padding-left: 30px;
-      min-height: 348px;
-      min-width: 254px;
+      height: 348px;
+      width: 254px;
     }
 
     &__images {
@@ -218,7 +219,7 @@
     &__button {
       margin-top: 40px;
       width: 284px;
-      height: 46px;
+      min-height: 46px;
       font-size: 13px;
       line-height: 19px;
     }
@@ -228,7 +229,8 @@
       width: 234px;
       height: 160px;
       background-size: 181px 139px;
-      top: 21px;
+      top: 151px;
+      right:50px;
     }
 
     &__bike {

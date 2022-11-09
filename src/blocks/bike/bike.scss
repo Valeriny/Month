@@ -3,9 +3,8 @@
 
 .bike {
   @include border-box;
-  padding: 0;
+  padding: 60px 120px 60px 0;
   margin: 0;
-  margin-right: 120px;
 
   &__slider-line {
     @include border-box;
@@ -125,17 +124,18 @@
 
 @media screen and (max-width: 480px) {
   .bike {
-    margin: 40px auto 64px;
+    margin: 40px auto;
+    padding: 0;
 
     &__slider-line {
-      margin-top: 35px;
+      margin-top: 20px;
       justify-content: start;
     }
 
     &__slider {
       display: flex;
       justify-content: center;
-      gap: 13px;
+      gap: 5px;
     }
 
     &__menu {

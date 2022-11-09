@@ -53,7 +53,6 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex: row;
     gap: 30px;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -89,7 +88,7 @@
     @include border-box;
     padding: 0;
     margin: 0;
-    width: 100%;
+    max-width: 580px;
     max-height: 460px;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -100,7 +99,7 @@
 
 @media screen and (max-width: 480px) {
   .training {
-    margin: 40px 0 60px;
+    margin: 0px 0 60px;
     padding-right: 0;
     max-height: fit-content;
     display: flex;
@@ -129,6 +128,11 @@
       grid-column-end: none;
       grid-row-start: none;
       grid-row-end: none;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }

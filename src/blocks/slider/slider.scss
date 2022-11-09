@@ -4,7 +4,7 @@
   @include border-box;
   padding: 0;
   margin: 0;
-  margin-top: 150px;
+  padding-top: 60px;
   overflow: hidden;
 
   &__vector {
@@ -156,6 +156,7 @@
 @media screen and (max-width: 480px) {
   .slider {
     margin-top: 0px;
+    padding: 0;
 
     &__vector {
       width: 35px;

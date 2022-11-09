@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="../dist/css/styles.css" />
     <title>Month-of-Lendings</title>
   </head>
-  <body class="body">
-    <main class="main">
-      <nav class="nav">
-        <input type="checkbox" name="" id="" class="nav__checkbox">
+  <body class="body">    
+      <header class="nav">
+        <input type="checkbox" name="menu" id="" class="nav__checkbox">
         <div class="nav__icon">
           <span></span>
           <span></span>
@@ -29,44 +28,46 @@
             <a class="menu__link" href="#training">Тренировки</a>
           </li>
         </ul>
-      </nav>
-      <header class="header">
-        <h1 class="header__title title">
+      </header>
+      <main class="main">
+      <section class="intro">
+        <h1 class="intro__title title">
           Шоссе, ТТ и&nbsp;Грэвел
         </h1>
-        <div class="header__text">
-          <p class="header__subtitle">
+        <div class="intro__text">
+          <p class="intro__subtitle">
             Триатлонные старты, горные серпантины или&nbsp;грейвел заезды
             по&nbsp;живописным маршрутам – нужно только определиться
             с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
           </p>
-          <button class="header__button" type="button">
-            <span class="header__button-text">Подробнее</span>
+          <button class="intro__button" type="button">
+            <span class="intro__button-text">Подробнее</span>
           </button>
         </div>
-        <div class="header__bike">
-          <h3 class="header__bike-name">Cannondale Systemsix</h3>
-          <hr class="header__bike-line" />
+        <div class="intro__bike">
+          <h3 class="intro__bike-name">Cannondale Systemsix</h3>
+          <hr class="intro__bike-line" />
         </div>
-        <div class="header__images">
-        <img src="images/Placeholder.jpg" class="header__img" />
-        <div class="header__bike-fix"></div>
+        <div class="intro__images">
+        <img src="images/Placeholder.jpg" alt="Природная дорога" class="intro__img" />
+        <div class="intro__bike-fix"></div>
       </div>
-      </header>
-      <div class="Eddy-Merckx">
+      </section>
+      <div class="eddy-merckx">
         <hr class="line" />
         <img
+        alt="Остров Исландия"
           src="images/Eddi_Merckx.jpg"
-          class="Eddy-Merckx__img"
+          class="eddy-merckx__img"
         />
-        <div class="Eddy-Merckx__text">
-          <h2 class="Eddy-Merckx__quote">
+        <div class="eddy-merckx__text">
+          <h2 class="eddy-merckx__quote">
             «Катайся много или&nbsp;мало, долго или&nbsp;коротко,
             как&nbsp;хочешь - но&nbsp;катайся»
           </h2>
-          <div class="Eddy-Merckx__profile">
-            <h3 class="Eddy-Merckx__author">Эдди Меркс</h3>
-            <h4 class="Eddy-Merckx__activity">Велогонщик</h4>
+          <div class="eddy-merckx__profile">
+            <h3 class="eddy-merckx__author">Эдди Меркс</h3>
+            <h4 class="eddy-merckx__activity">Велогонщик</h4>
           </div>
         </div>
       </div>
@@ -81,21 +82,22 @@
         </p>
         <div class="slider__container">
           <div class="slider__container-images" id="slider">
-            <img class="slider__img" src="images/highway.jpg" id=1/>
-            <img class="slider__img" src="images/gravel.jpg" id=2/>
-            <img class="slider__img" src="images/TG.jpg" id=3/>
+            <img alt="Пейзаж дорога" class="slider__img" src="images/highway.jpg" id=1/>
+            <img alt="Лесная дорога" class="slider__img" src="images/gravel.jpg" id=2/>
+            <img alt="Лойно дорога" class="slider__img" src="images/TG.jpg" id=3/>
           </div>
-          <img class="slider__figure" src="images/figure.png" />
+          <img alt="Зеленая фигура" class="slider__figure" src="images/figure.png" />
           <img
+          alt="Вектор езды"
             class="slider__vector"
             src="images/Vector 1.svg"
           />
         </div>
         <div class="slider__switch">
-          <button
+          <button type="button"
             class="slider__button slider__button-left"
           ></button>
-          <button
+          <button type="button"
             class="slider__button slider__button-right"
           ></button>
         </div>
@@ -129,16 +131,13 @@
             <li class="bike__slider-indicator"></li>
             <li class="bike__slider-indicator"></li>
           </ul>
-        </div>
-
-
       </section>
       <section class="training">
         <hr class="line" />
         <h2 class="title training__title" id="training">
           Тренировки
         </h2>
-        <img src="images/road turn.jpg" class="training__img" />
+        <img alt="Дорога" src="images/road turn.jpg" class="training__img" />
         <p class="training__subtitle subtitle">
           Чтобы найти маршрут для тренировки можно воспользоваться сервисом
           Komoot, а записать эти тренировки поможет приложение Strava, а также
@@ -162,7 +161,7 @@
           <div class="popup__theme">
           <div class="popup__theme-light"></div>
           <label class="popup__checkbox">
-            <input type="checkbox" />
+            <input name="switch-mobile" type="checkbox" />
             <span
               class="popup__switch"
               data-label-on="On"
@@ -196,13 +195,14 @@
       <div class="footer__panel">
         <h4 class="footer__author">&copy; Road Club 2021</h4>
         <img
+        alt="Маркер"
           src="images/logo-color.png"
           class="footer__logo-color"
         />
         <div class="footer__theme">
           <div class="footer__theme-light"></div>
           <label class="footer__checkbox">
-            <input type="checkbox" />
+            <input  name="switch" type="checkbox" />
             <span
               class="footer__switch"
               data-label-on="On"
@@ -220,9 +220,9 @@
             <img src="#" class="card__img" />
           </a>
         </div>
-        <h3 class="card__name"></h3>
+        <h2 class="card__name"></h2>
       </li>
     </template>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>
