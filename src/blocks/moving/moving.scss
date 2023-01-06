@@ -1,0 +1,18 @@
+@keyframes moving {
+  from {
+    transform: translate(0, 0px);
+  }
+  to {
+    transform: translate(0, 130px);
+  }
+}
+
+.moving {
+  animation: moving 0.3s linear forwards normal;
+}
+
+@media screen and (max-width: 480px) {
+  .moving {
+    animation: none;
+  }
+}
